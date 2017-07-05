@@ -1,5 +1,7 @@
 # @mapbox/appropriate-images-get-url
 
+[![Build Status](https://travis-ci.org/mapbox/appropriate-images-get-url.svg?branch=master)](https://travis-ci.org/mapbox/appropriate-images-get-url)
+
 🚧🚧 **EXPERIMENTAL! WORK IN PROGRESS!** 🚧🚧
 
 **Use in combination with [appropriate-images].**
