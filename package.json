@@ -1,0 +1,51 @@
+{
+  "name": "@mapbox/appropriate-images-get-url",
+  "description": "Given an appropriate-images configuration, get the URL of the optimized image appropriate for a situation",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "format": "prettier --single-quote --write '{,lib/**/,test/**/}*.js'",
+    "lint": "eslint .",
+    "test-jest": "jest",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/appropriate-images-get-url.git"
+  },
+  "keywords": [
+    "appropriate-images",
+    "responsive-images"
+  ],
+  "author": "Mapbox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mapbox/appropriate-images-get-url/issues"
+  },
+  "homepage": "https://github.com/mapbox/appropriate-images-get-url#readme",
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.0",
+    "prettier": "^1.5.2"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint",
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "clearMocks": true
+  }
+}
