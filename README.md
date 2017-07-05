@@ -42,7 +42,7 @@ Image ids correspond to keys in your [appropriate-images configuration].
 
 Your [appropriate-images configuration] object.
 
-#### width
+#### availableWidth
 
 `?number` - Default: `Infinity`.
 
@@ -55,7 +55,7 @@ This is key to figuring out which size variant to load.
 `?number` - Default: `1.3`.
 
 The ratio at which you want to consider a screen "high resolution".
-If the browser judges that the screen is high resolution, according to this ratio, the `width` provided will be multiplied by this ratio when determining which size variant to load.
+If the browser judges that the screen is high resolution, according to this ratio, the [`availableWidth`] provided will be multiplied by this ratio when determining which size variant to load.
 This means that in a `300px`-wide space but *on a Retina screen*, the image at least `600px` wide will be loaded.
 
 #### imageDirectory
@@ -106,3 +106,4 @@ getAppropriateImageUrl({
 
 [appropriate-images]: https://github.com/mapbox/appropriate-images
 [appropriate-images configuration]: https://github.com/mapbox/appropriate-images#image-configuration
+[`availableWidth`]: #availablewidth

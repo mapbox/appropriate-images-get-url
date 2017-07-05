@@ -41,7 +41,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'bear',
-        width: 280,
+        availableWidth: 280,
         imageConfig
       })
     ).toBe('bear-300.png');
@@ -51,7 +51,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'bear',
-        width: 340,
+        availableWidth: 340,
         imageConfig
       })
     ).toBe('bear-600.png');
@@ -61,7 +61,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'bear',
-        width: 800,
+        availableWidth: 800,
         imageConfig
       })
     ).toBe('bear-600.png');
@@ -71,7 +71,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'osprey',
-        width: 280,
+        availableWidth: 280,
         imageConfig
       })
     ).toBe('osprey-300x300.jpg');
@@ -81,7 +81,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'osprey',
-        width: 400,
+        availableWidth: 400,
         imageDirectory: 'foo/bar',
         imageConfig
       })
@@ -90,7 +90,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'osprey',
-        width: 400,
+        availableWidth: 400,
         imageDirectory: 'foo/bar/',
         imageConfig
       })
@@ -101,7 +101,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'montaraz',
-        width: 180,
+        availableWidth: 180,
         imageConfig
       })
     ).toBe('montaraz-200x200.jpg');
@@ -111,7 +111,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'montaraz',
-        width: 180,
+        availableWidth: 180,
         imageConfig
       })
     ).toBe('montaraz-200x200.jpg');
@@ -122,7 +122,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'montaraz',
-        width: 180,
+        availableWidth: 180,
         imageConfig
       })
     ).toBe('montaraz-200x200.webp');
@@ -133,7 +133,7 @@ describe('getAppropriateImageUrl', () => {
     expect(
       getAppropriateImageUrl({
         imageId: 'osprey',
-        width: 280,
+        availableWidth: 280,
         imageConfig
       })
     ).toBe('osprey-600.jpg');
