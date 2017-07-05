@@ -1,6 +1,6 @@
 'use strict';
 
-const getAppropriateImageUrl = require('../lib/get-appropriate-image-url');
+const getAppropriateImageUrl = require('..');
 const isHighResolution = require('../lib/is-high-resolution');
 const supportsWebp = require('../lib/supports-webp');
 

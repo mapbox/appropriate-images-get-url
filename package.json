@@ -1,7 +1,7 @@
 {
   "name": "@mapbox/appropriate-images-get-url",
   "description": "Given an appropriate-images configuration, get the URL of the optimized image appropriate for a situation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
