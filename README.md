@@ -7,17 +7,24 @@
 **Use in combination with [appropriate-images].**
 
 After you've generated resized, optimized images with [appropriate-images], you'll want to use them in the browser.
-In order to do that, you'll need to determine *which variant* of the image to load — that is, which size, and whether to load `.webp` or not.
+In order to do that, you'll need to determine *which variant* of the image to load — which size, and whether to load `.webp` or not.
 That's what this module is for.
-This is how the image configuration used by [appropriate-images] can be reused in the browser to select the appropriate image to load at runtime.
+This is how the image configuration used by [appropriate-images] can be *reused in the browser* to select the appropriate image to load at runtime.
 
 **If you're thinking about using this function in combination with React, check out the [appropriate-images-react](https://github.com/mapbox/appropriate-images-react) repo.**
 
+## Installation
+
+```
+npm install @mapbox/appropriate-images-get-url
+```
+
 ## API
 
-`getAppropriateImageUrl(options: Object): string`
+### getAppropriateImageUrl(options)
 
-Uses the configuration and a width value to figure out the URL of the image variant that should be loaded.
+Uses your image configuration and a width value to figure out the URL of the image variant that should be loaded.
+Returns a URL for the appropriate image variant that you created with [available-images].
 
 The returned URL will account for
 
@@ -27,42 +34,44 @@ The returned URL will account for
 
 The image variant that is selected will be **the narrowest variant that is at least as wide as the available width, or else, if the available width exceeds all sizes, the widest variant**.
 
-If you created your image variants with [available-images], the URLs this function returns should match the paths to resized, optimized images.
+#### options
 
-### Options
+##### imageId
 
-#### imageId
-
-`string` (required)
+Type: `string`.
+**Required.**
 
 Id of the image to be loaded.
 Image ids correspond to keys in your [appropriate-images configuration].
 
-#### imageConfig
+##### imageConfig
 
-`Object` (required)
+Type: `Object`.
+**Required.**
 
 Your [appropriate-images configuration] object.
 
-#### availableWidth
+##### availableWidth
 
-`?number` - Default: `Infinity`.
+Type `number`.
+Default: `Infinity`.
 
 Not technically required, but you should provide it.
 This is the width available to the image.
 This is key to figuring out which size variant to load.
 
-#### hiResRatio
+##### hiResRatio
 
-`?number` - Default: `1.3`.
+Type `number`.
+Default: `1.3`.
 
 The ratio at which you want to consider a screen "high resolution".
 If the browser judges that the screen is high resolution, according to this ratio, the [`availableWidth`] provided will be multiplied by this ratio when determining which size variant to load.
 This means that in a `300px`-wide space but *on a Retina screen*, the image at least `600px` wide will be loaded.
 
-#### imageDirectory
+##### imageDirectory
 
-`?string`
+Type `string`.
 
 If provided, this will be prepended to the URL.
 
