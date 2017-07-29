@@ -21,7 +21,9 @@ npm install @mapbox/appropriate-images-get-url
 
 ## API
 
-### getAppropriateImageUrl(options)
+### getAppropriateImageUrl
+
+`getAppropriateImageUrl(options)`
 
 Uses your image configuration and a width value to figure out the URL of the image variant that should be loaded.
 Returns a URL for the appropriate image variant that you created with [available-images].
