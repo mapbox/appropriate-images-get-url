@@ -2,16 +2,14 @@
 
 [![Build Status](https://travis-ci.org/mapbox/appropriate-images-get-url.svg?branch=master)](https://travis-ci.org/mapbox/appropriate-images-get-url)
 
-🚧🚧 **EXPERIMENTAL! WORK IN PROGRESS!** 🚧🚧
-
 **Use in combination with [appropriate-images].**
 
 After you've generated resized, optimized images with [appropriate-images], you'll want to use them in the browser.
-In order to do that, you'll need to determine *which variant* of the image to load — which size, and whether to load `.webp` or not.
+In order to do that, you'll need to determine *which variant* of the image to load — which size, and whether to load the `.webp` version or not.
 That's what this module is for.
 This is how the image configuration used by [appropriate-images] can be *reused in the browser* to select the appropriate image to load at runtime.
 
-**If you're thinking about using this function in combination with React, check out the [appropriate-images-react](https://github.com/mapbox/appropriate-images-react) repo.**
+**If you're thinking about using this function in combination with React, check out [appropriate-images-react](https://github.com/mapbox/appropriate-images-react).**
 
 ## Installation
 
@@ -25,8 +23,8 @@ npm install @mapbox/appropriate-images-get-url
 
 `getAppropriateImageUrl(options)`
 
-Uses your image configuration and a width value to figure out the URL of the image variant that should be loaded.
-Returns a URL for the appropriate image variant that you created with [available-images].
+Uses the image id, image configuration, and width value to figure out the URL of the image variant that should be loaded.
+Returns a URL for the appropriate image variant that you created with [appropriate-images].
 
 The returned URL will account for
 
