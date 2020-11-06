@@ -5,7 +5,7 @@ const getWindow = require('../lib/get-window');
 
 jest.mock('../lib/get-window', () => {
   const win = {
-    matchMedia: jest.fn().mockReturnValue({ matches: false })
+    matchMedia: jest.fn().mockReturnValue({ matches: false }),
   };
   const m = () => win;
   m.win = win;

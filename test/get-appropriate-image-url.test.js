@@ -16,7 +16,7 @@ describe('getAppropriateImageUrl', () => {
   const imageConfig = {
     bear: {
       basename: 'bear.png',
-      sizes: [{ width: 300 }, { width: 600 }]
+      sizes: [{ width: 300 }, { width: 600 }],
     },
     montaraz: {
       basename: 'montaraz.jpg',
@@ -24,17 +24,17 @@ describe('getAppropriateImageUrl', () => {
         { width: 300, height: 500 },
         { width: 1200, crop: 'north' },
         { width: 200, height: 200, crop: 'southeast' },
-        { width: 210, height: 210, crop: 'northwest' }
-      ]
+        { width: 210, height: 210, crop: 'northwest' },
+      ],
     },
     osprey: {
       basename: 'osprey.jpg',
-      sizes: [{ width: 600 }, { width: 300, height: 300 }]
+      sizes: [{ width: 600 }, { width: 300, height: 300 }],
     },
     walrus: {
       basename: 'walrus.png',
-      sizes: [{ width: 400 }]
-    }
+      sizes: [{ width: 400 }],
+    },
   };
 
   test('works beneath narrowest', () => {
@@ -42,7 +42,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'bear',
         availableWidth: 280,
-        imageConfig
+        imageConfig,
       })
     ).toBe('bear-300.png');
   });
@@ -52,7 +52,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'bear',
         availableWidth: 340,
-        imageConfig
+        imageConfig,
       })
     ).toBe('bear-600.png');
   });
@@ -62,7 +62,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'bear',
         availableWidth: 800,
-        imageConfig
+        imageConfig,
       })
     ).toBe('bear-600.png');
   });
@@ -72,7 +72,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'osprey',
         availableWidth: 280,
-        imageConfig
+        imageConfig,
       })
     ).toBe('osprey-300x300.jpg');
   });
@@ -83,7 +83,7 @@ describe('getAppropriateImageUrl', () => {
         imageId: 'osprey',
         availableWidth: 400,
         imageDirectory: 'foo/bar',
-        imageConfig
+        imageConfig,
       })
     ).toBe('foo/bar/osprey-600.jpg');
 
@@ -92,7 +92,7 @@ describe('getAppropriateImageUrl', () => {
         imageId: 'osprey',
         availableWidth: 400,
         imageDirectory: 'foo/bar/',
-        imageConfig
+        imageConfig,
       })
     ).toBe('foo/bar/osprey-600.jpg');
   });
@@ -102,7 +102,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'montaraz',
         availableWidth: 180,
-        imageConfig
+        imageConfig,
       })
     ).toBe('montaraz-200x200.jpg');
   });
@@ -112,7 +112,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'montaraz',
         availableWidth: 180,
-        imageConfig
+        imageConfig,
       })
     ).toBe('montaraz-200x200.jpg');
   });
@@ -123,7 +123,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'montaraz',
         availableWidth: 180,
-        imageConfig
+        imageConfig,
       })
     ).toBe('montaraz-200x200.webp');
   });
@@ -134,7 +134,7 @@ describe('getAppropriateImageUrl', () => {
       getAppropriateImageUrl({
         imageId: 'osprey',
         availableWidth: 280,
-        imageConfig
+        imageConfig,
       })
     ).toBe('osprey-600.jpg');
   });
