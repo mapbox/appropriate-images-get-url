@@ -1,7 +1,7 @@
 {
   "name": "@mapbox/appropriate-images-get-url",
   "description": "Given an appropriate-images configuration, get the URL of the optimized image appropriate for a situation",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "scripts": {
     "format": "prettier --single-quote --write --trailing-comma es5 '{,lib/**/,test/**/}*.js'",
