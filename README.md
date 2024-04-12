@@ -1,5 +1,7 @@
 # @mapbox/appropriate-images-get-url
 
+## Note:  This repository is no longer in use. As of April 2024 it is archived.
+
 [![Build Status](https://travis-ci.com/mapbox/appropriate-images-get-url.svg?branch=main)](https://travis-ci.com/mapbox/appropriate-images-get-url)
 
 **Use in combination with [appropriate-images].**
